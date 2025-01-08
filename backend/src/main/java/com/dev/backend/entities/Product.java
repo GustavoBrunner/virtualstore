@@ -1,6 +1,5 @@
 package com.dev.backend.entities;
 
-
 import java.util.Date;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -13,32 +12,32 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
-import jakarta.persistence.Temporal;
-import jakarta.persistence.TemporalType;
 import jakarta.persistence.Transient;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "city")
+@Table(name = "product")
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class City {
+public class Product {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    
     private String name;
 
+    
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "state_id")
-    private State state;
-    
-    @Temporal(TemporalType.TIMESTAMP)
+    @JoinColumn(name = "brand_id")
+    private Brand brand;
+
+    private String shortDescription;
+    private String fullDescription;
+    private Double productionPrice;
+    private Double sellPrice;
     private Date insertionDate;
-    
-    @Temporal(TemporalType.TIMESTAMP)
     private Date atualizationDate;
+ 
 }
