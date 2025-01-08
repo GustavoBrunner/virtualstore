@@ -13,23 +13,18 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-
 @Entity
-@Table(name = "state")
+@Table(name = "category")
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class State {
-    
+public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    
     private String name;
-    private String acronym;
     @Temporal(TemporalType.TIMESTAMP)
     private Date insertionDate;
     @Temporal(TemporalType.TIMESTAMP)
     private Date atualizationDate;
-
 }

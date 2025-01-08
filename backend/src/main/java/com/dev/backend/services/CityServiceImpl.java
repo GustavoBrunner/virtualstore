@@ -1,6 +1,5 @@
 package com.dev.backend.services;
 
-import java.beans.JavaBean;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
