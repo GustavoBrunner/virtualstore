@@ -1,5 +1,6 @@
 package com.dev.backend.services;
 
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
@@ -44,12 +45,24 @@ public class PersonServiceImpl implements PersonService {
         } catch(Exception e) {
             throw new RuntimeException(e);
         }
-        
+        entity.setInsertionDate(new Date());
         return repository.save(entity);
     }
 
     @Override
     public Person update(Person entity) {
+        try{
+            EmailValidator.isValid(entity.getEmail());
+             
+            CpfValidator.isValid(entity.getCpf());
+        } catch(Exception e) {
+            throw new RuntimeException(e);
+        }
+        Person person = repository.findById(entity.getId()).get();
+        if(!person.getInsertionDate().equals(null)){
+            entity.setInsertionDate(person.getInsertionDate());
+        }
+        entity.setAtualizationDate(new Date());
         return repository.save(entity);
     }
 
