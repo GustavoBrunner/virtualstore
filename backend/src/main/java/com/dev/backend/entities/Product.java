@@ -33,6 +33,11 @@ public class Product {
     @JoinColumn(name = "brand_id")
     private Brand brand;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "category_id")
+    private Category category;
+
+    
     private String shortDescription;
     private String fullDescription;
     private Double productionPrice;
