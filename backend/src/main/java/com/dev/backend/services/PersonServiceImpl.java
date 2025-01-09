@@ -7,6 +7,8 @@ import org.springframework.stereotype.Service;
 
 import com.dev.backend.contracts.PersonService;
 import com.dev.backend.entities.Person;
+import com.dev.backend.entities.Exceptions.InvalidCpfException;
+import com.dev.backend.entities.Exceptions.InvalidEmailException;
 import com.dev.backend.repositories.PersonRepository;
 import com.dev.backend.util.CpfValidator;
 import com.dev.backend.util.EmailValidator;
@@ -39,9 +41,13 @@ public class PersonServiceImpl implements PersonService {
     @Override
     public Person create(Person entity) {
         try{
-            EmailValidator.isValid(entity.getEmail());
+            if(!EmailValidator.isValid(entity.getEmail())){
+                throw new InvalidEmailException("Invalid email inserted");
+            }
              
-            CpfValidator.isValid(entity.getCpf());
+            if(!CpfValidator.isValid(entity.getCpf())) {
+                throw new InvalidCpfException("Invalid cpf inserted!");
+            };
         } catch(Exception e) {
             throw new RuntimeException(e);
         }
