@@ -37,6 +37,7 @@ public class Product {
     @JoinColumn(name = "category_id")
     private Category category;
 
+    
     private String shortDescription;
     private String fullDescription;
     private Double productionPrice;
