@@ -13,11 +13,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.dev.backend.contracts.ProductImagesService;
 import com.dev.backend.entities.Product;
 import com.dev.backend.entities.ProductImages;
 import com.dev.backend.repositories.ProductImagesRepository;
 import com.dev.backend.repositories.ProductRepository;
+import com.dev.backend.services.contracts.ProductImagesService;
 
 @Service
 public class ProductImagesServiceImpl implements ProductImagesService {

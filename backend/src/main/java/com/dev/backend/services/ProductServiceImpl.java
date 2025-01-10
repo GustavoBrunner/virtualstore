@@ -6,9 +6,9 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.dev.backend.contracts.ProductService;
 import com.dev.backend.entities.Product;
 import com.dev.backend.repositories.ProductRepository;
+import com.dev.backend.services.contracts.ProductService;
 
 @Service
 public class ProductServiceImpl implements ProductService {

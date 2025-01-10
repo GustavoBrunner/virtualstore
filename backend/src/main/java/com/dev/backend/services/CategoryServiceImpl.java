@@ -7,9 +7,9 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.dev.backend.contracts.CategoryService;
 import com.dev.backend.entities.Category;
 import com.dev.backend.repositories.CategoryRepository;
+import com.dev.backend.services.contracts.CategoryService;
 
 @Service
 public class CategoryServiceImpl implements CategoryService {

@@ -3,8 +3,8 @@ package com.dev.backend.controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.dev.backend.contracts.ProductService;
 import com.dev.backend.entities.Product;
+import com.dev.backend.services.contracts.ProductService;
 
 import java.util.List;
 

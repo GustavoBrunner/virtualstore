@@ -7,9 +7,9 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.dev.backend.contracts.CityService;
 import com.dev.backend.entities.City;
 import com.dev.backend.repositories.CityRepository;
+import com.dev.backend.services.contracts.CityService;
 
 @Service
 public class CityServiceImpl implements CityService{
