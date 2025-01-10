@@ -5,11 +5,11 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.dev.backend.contracts.PersonService;
 import com.dev.backend.entities.Person;
 import com.dev.backend.entities.Exceptions.InvalidCpfException;
 import com.dev.backend.entities.Exceptions.InvalidEmailException;
 import com.dev.backend.repositories.PersonRepository;
+import com.dev.backend.services.contracts.PersonService;
 import com.dev.backend.util.CpfValidator;
 import com.dev.backend.util.EmailValidator;
 

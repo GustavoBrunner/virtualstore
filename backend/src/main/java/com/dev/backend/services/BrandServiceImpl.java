@@ -7,9 +7,9 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.dev.backend.contracts.BrandService;
 import com.dev.backend.entities.Brand;
 import com.dev.backend.repositories.BrandRepository;
+import com.dev.backend.services.contracts.BrandService;
 
 @Service
 public class BrandServiceImpl implements BrandService {

@@ -7,9 +7,9 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.dev.backend.contracts.StateService;
 import com.dev.backend.entities.State;
 import com.dev.backend.repositories.StateRepository;
+import com.dev.backend.services.contracts.StateService;
 
 @Service
 public class StateServiceImpl implements StateService  {

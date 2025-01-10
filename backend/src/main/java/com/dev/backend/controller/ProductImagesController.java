@@ -4,8 +4,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.dev.backend.contracts.ProductImagesService;
 import com.dev.backend.entities.ProductImages;
+import com.dev.backend.services.contracts.ProductImagesService;
 
 import java.util.List;
 

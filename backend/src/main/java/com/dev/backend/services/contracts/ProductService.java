@@ -1,4 +1,4 @@
-package com.dev.backend.contracts;
+package com.dev.backend.services.contracts;
 
 import java.util.List;
 
