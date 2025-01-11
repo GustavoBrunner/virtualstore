@@ -25,7 +25,7 @@ public class PersonPermissionServiceImpl implements PersonPermissionService {
 
     @Override
     public void create(Person entity) {
-        List<Permission> permission = permissionRepo.getByName("Client");
+        List<Permission> permission = permissionRepo.getByName("Cliente");
         if(!permission.isEmpty()){
             PersonPermission personPermission = new PersonPermission();
             personPermission.setPerson(entity);
