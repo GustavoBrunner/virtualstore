@@ -22,7 +22,7 @@ public class PersonClientController {
         this.service = service;
     }
 
-    @PostMapping
+    @PostMapping("/")
     public ResponseEntity<Person> create(@RequestBody PersonClientRequestDto dto){
         if(dto.equals(null)){
             return ResponseEntity.badRequest().build();

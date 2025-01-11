@@ -4,10 +4,6 @@ package com.dev.backend.entities;
 import java.util.Date;
 import java.util.List;
 
-import com.dev.backend.entities.Exceptions.InvalidCpfException;
-import com.dev.backend.entities.Exceptions.InvalidEmailException;
-import com.dev.backend.util.CpfValidator;
-import com.dev.backend.util.EmailValidator;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import jakarta.annotation.Nonnull;
@@ -38,19 +34,19 @@ public class Person {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Nonnull
+    //@Nonnull
     private String name;
-    @Nonnull
+    //@Nonnull
     private String email;
 
-    @Nonnull
+    //@Nonnull
     private String cpf;
-    @Nonnull
+    //@Nonnull
     private String password;
-    @Nonnull
+    //@Nonnull
     private String address;
     
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "city_id")
     private City city;
 
@@ -58,7 +54,7 @@ public class Person {
     @Setter(value = AccessLevel.NONE)
     private List<PersonPermission> permissions;
     
-    @Nonnull
+    //@Nonnull
     private String cep;
     private Date insertionDate;
     private Date atualizationDate;
